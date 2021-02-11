@@ -4,7 +4,7 @@ import java.util.List;
 
 public class CalculationService {
 	
-	public static <Type extends Comparable<Type>> Type max(List<Type> list) {
+	public static <Type extends Comparable<? super Type>> Type max(List<Type> list) {
 		if(list.isEmpty()) {
 			throw new IllegalStateException("List can't be empty");
 		}

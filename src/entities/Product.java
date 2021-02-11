@@ -29,6 +29,11 @@ public class Product implements Comparable<Product> {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	@Override
+	public String toString() {
+		return name + ", " + String.format("%.2f", price);
+	}
 
 	@Override
 	public int compareTo(Product other) {
